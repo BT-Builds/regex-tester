@@ -4,6 +4,18 @@ from pydantic import BaseModel, Field
 from typing import List, Optional
 
 app = FastAPI(title="Regex Tester API", version="1.0.0")
+# === BT Builds Standard Middleware (auto-injected) ===
+from fastapi.middleware.cors import CORSMiddleware as _BTCors
+app.add_middleware(_BTCors, allow_origins=["*"], allow_methods=["*"],
+    allow_headers=["*"], expose_headers=["X-RateLimit-Limit","X-RateLimit-Remaining","X-RateLimit-Reset"])
+
+@app.middleware("http")
+async def _bt_add_headers(request, call_next):
+    response = await call_next(request)
+    response.headers["X-Powered-By"] = "btbuilds"
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    return response
+
 
 # Rate limiting storage (simple in-memory)
 rate_limit_store = {}
