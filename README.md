@@ -62,3 +62,6 @@ curl https://regex-tester.vercel.app/explain/\\d+
 
 ## Pricing
 List on RapidAPI for $15-29/month team plans.
+
+## Postman
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://raw.githubusercontent.com/BT-Builds/regex-tester/main/postman_collection.json)
