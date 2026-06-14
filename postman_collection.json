@@ -81,6 +81,34 @@
       }
     },
     {
+      "name": "Bulk Test Regex",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{api_key}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/bulk/test",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "bulk",
+            "test"
+          ]
+        }
+      }
+    },
+    {
       "name": "Validate Regex",
       "request": {
         "method": "POST",
@@ -117,6 +145,34 @@
       }
     },
     {
+      "name": "Bulk Validate Regex",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{api_key}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/bulk/validate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "bulk",
+            "validate"
+          ]
+        }
+      }
+    },
+    {
       "name": "Explain Regex",
       "request": {
         "method": "POST",
@@ -149,6 +205,34 @@
               "language": "json"
             }
           }
+        }
+      }
+    },
+    {
+      "name": "Bulk Explain Regex",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{api_key}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/bulk/explain",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "bulk",
+            "explain"
+          ]
         }
       }
     },
